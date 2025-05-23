@@ -2359,3 +2359,72 @@ java.lang.Exception: Resource '/35_4_HTTP-server_ESP-IDF/main/main.c' does not e
 
 !ENTRY com.espressif.idf.core 1 0 2025-05-23 14:15:45.069
 !MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:20:09.585
+!MESSAGE clangd: C:\Espressif\tools\esp-clang\16.0.1-fe4f10a809\esp-clang\bin\clangd.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:20:09.598
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:20:09.611
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:20:13.340
+!MESSAGE clangd: C:\Espressif\tools\esp-clang\16.0.1-fe4f10a809\esp-clang\bin\clangd.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:20:13.351
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:20:13.360
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:21:59.926
+!MESSAGE clangd: C:\Espressif\tools\esp-clang\16.0.1-fe4f10a809\esp-clang\bin\clangd.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:21:59.937
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:21:59.947
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:23:30.924
+!MESSAGE clangd: C:\Espressif\tools\esp-clang\16.0.1-fe4f10a809\esp-clang\bin\clangd.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:23:30.938
+!MESSAGE C:\Espressif\frameworks\esp-idf-v5.3.1\tools\idf.py -p COM5 flash
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:23:30.938
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:23:30.942
+!MESSAGE flash command: C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.3.1\tools\idf.py -p COM5 flash
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:23:30.948
+!MESSAGE toolchain path: C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:43.786
+!MESSAGE Server started!
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:43.795
+!MESSAGE Executing C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe -m pip list
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:43.796
+!MESSAGE {USERDOMAIN_ROAMINGPROFILE=DESKTOP-UHMIG1O, LOCALAPPDATA=C:\Users\User\AppData\Local, PROCESSOR_LEVEL=23, USERDOMAIN=DESKTOP-UHMIG1O, LOGONSERVER=\\DESKTOP-UHMIG1O, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules, IDF_TOOLS_PATH=C:/Espressif, SystemDrive=C:, OneDrive=C:\Users\User\OneDrive, PT8HOME=C:\Program Files\Cisco Packet Tracer 8.2.2, APPDATA=C:\Users\User\AppData\Roaming, USERNAME=User, ProgramFiles(x86)=C:\Program Files (x86), VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\, CommonProgramFiles=C:\Program Files\Common Files, Path=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Inkscape\bin;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\MinGW\bin;C:\Program Files\Ekahau\Ekahau AI Pro\oda-lib;C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python312\;C:\Users\User\AppData\Local\Programs\Python\Launcher\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Local\Programs\Python\Python312;, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, DriverData=C:\Windows\System32\Drivers\DriverData, OS=Windows_NT, COMPUTERNAME=DESKTOP-UHMIG1O, PROCESSOR_REVISION=1801, CommonProgramW6432=C:\Program Files\Common Files, ComSpec=C:\Windows\system32\cmd.exe, ProgramData=C:\ProgramData, ProgramW6432=C:\Program Files, HOMEPATH=\Users\User, SystemRoot=C:\Windows, TEMP=C:\Users\User\AppData\Local\Temp, HOMEDRIVE=C:, PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD, USERPROFILE=C:\Users\User, TMP=C:\Users\User\AppData\Local\Temp, CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files, ProgramFiles=C:\Program Files, PUBLIC=C:\Users\Public, NUMBER_OF_PROCESSORS=8, windir=C:\Windows, com.ekahau.conf.dir=C:\Program Files\Ekahau\Ekahau AI Pro\conf, =::=::\}
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:44.938
+!MESSAGE websocket-client already installed
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:44.956
+!MESSAGE [C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe, C:\Espressif\frameworks\esp-idf-v5.3.1\tools\idf_monitor.py, -p, \\.\COM5, -b, 115200, --ws, ws://localhost:64396, C:/ESP-IDE/35_4_HTTP-server_ESP-IDF_client/35_4_HTTP-server_ESP-IDF_client/build/app-template.elf]
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:44.958
+!MESSAGE {USERDOMAIN_ROAMINGPROFILE=DESKTOP-UHMIG1O, PATH=C:\Espressif\tools\xtensa-esp-elf-gdb\14.2_20240403\xtensa-esp-elf-gdb\bin;C:\Espressif\tools\riscv32-esp-elf-gdb\14.2_20240403\riscv32-esp-elf-gdb\bin;C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin;C:\Espressif\tools\esp-clang\16.0.1-fe4f10a809\esp-clang\bin;C:\Espressif\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin;C:\Espressif\tools\esp32ulp-elf\2.38_20240113\esp32ulp-elf\bin;C:\Espressif\tools\cmake\3.24.0\bin;C:\Espressif\tools\openocd-esp32\v0.12.0-esp32-20240318\openocd-esp32\bin;C:\Espressif\tools\ninja\1.11.1\;C:\Espressif\tools\idf-exe\1.0.3\;C:\Espressif\tools\ccache\4.8\ccache-4.8-windows-x86_64;C:\Espressif\tools\dfu-util\0.11\dfu-util-0.11-win64;C:\Espressif\python_env\idf5.3_py3.11_env\Scripts;C:\Espressif\frameworks\esp-idf-v5.3.1\tools;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Inkscape\bin;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\MinGW\bin;C:\Program Files\Ekahau\Ekahau AI Pro\oda-lib;C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python312\;C:\Users\User\AppData\Local\Programs\Python\Launcher\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Local\Programs\Python\Python312, PROCESSOR_LEVEL=23, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, ESP_IDF_VERSION=5.3.1, PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules, SystemDrive=C:, OPENOCD_SCRIPTS=C:\Espressif\tools\openocd-esp32\v0.12.0-esp32-20240318\openocd-esp32\share\openocd\scripts, PT8HOME=C:\Program Files\Cisco Packet Tracer 8.2.2, USERNAME=User, ProgramFiles(x86)=C:\Program Files (x86), PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, DriverData=C:\Windows\System32\Drivers\DriverData, ProgramData=C:\ProgramData, IDF_COMPONENT_MANAGER=1, ProgramW6432=C:\Program Files, HOMEPATH=\Users\User, PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD, PYTHON_EXE_PATH=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe, ProgramFiles=C:\Program Files, PUBLIC=C:\Users\Public, windir=C:\Windows, =::=::\, LOCALAPPDATA=C:\Users\User\AppData\Local, GIT_PATH=C:/Espressif/tools/idf-git/2.44.0/cmd/git.exe, USERDOMAIN=DESKTOP-UHMIG1O, LOGONSERVER=\\DESKTOP-UHMIG1O, IDF_TOOLS_PATH=C:/Espressif, OneDrive=C:\Users\User\OneDrive, APPDATA=C:\Users\User\AppData\Roaming, VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\, CommonProgramFiles=C:\Program Files\Common Files, Path=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Inkscape\bin;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\MinGW\bin;C:\Program Files\Ekahau\Ekahau AI Pro\oda-lib;C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python312\;C:\Users\User\AppData\Local\Programs\Python\Launcher\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Local\Programs\Python\Python312;, OS=Windows_NT, COMPUTERNAME=DESKTOP-UHMIG1O, IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1/, PROCESSOR_REVISION=1801, CommonProgramW6432=C:\Program Files\Common Files, ComSpec=C:\Windows\system32\cmd.exe, IDF_MAINTAINER=1, SystemRoot=C:\Windows, TEMP=C:\Users\User\AppData\Local\Temp, PYTHONUNBUFFERED=1, HOMEDRIVE=C:, USERPROFILE=C:\Users\User, TMP=C:\Users\User\AppData\Local\Temp, CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files, NUMBER_OF_PROCESSORS=8, com.ekahau.conf.dir=C:\Program Files\Ekahau\Ekahau AI Pro\conf, IDF_PYTHON_ENV_PATH=C:\Espressif\python_env\idf5.3_py3.11_env}
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:44.959
+!MESSAGE {USERDOMAIN_ROAMINGPROFILE=DESKTOP-UHMIG1O, PATH=C:\Espressif\tools\xtensa-esp-elf-gdb\14.2_20240403\xtensa-esp-elf-gdb\bin;C:\Espressif\tools\riscv32-esp-elf-gdb\14.2_20240403\riscv32-esp-elf-gdb\bin;C:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin;C:\Espressif\tools\esp-clang\16.0.1-fe4f10a809\esp-clang\bin;C:\Espressif\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin;C:\Espressif\tools\esp32ulp-elf\2.38_20240113\esp32ulp-elf\bin;C:\Espressif\tools\cmake\3.24.0\bin;C:\Espressif\tools\openocd-esp32\v0.12.0-esp32-20240318\openocd-esp32\bin;C:\Espressif\tools\ninja\1.11.1\;C:\Espressif\tools\idf-exe\1.0.3\;C:\Espressif\tools\ccache\4.8\ccache-4.8-windows-x86_64;C:\Espressif\tools\dfu-util\0.11\dfu-util-0.11-win64;C:\Espressif\python_env\idf5.3_py3.11_env\Scripts;C:\Espressif\frameworks\esp-idf-v5.3.1\tools;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Inkscape\bin;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\MinGW\bin;C:\Program Files\Ekahau\Ekahau AI Pro\oda-lib;C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python312\;C:\Users\User\AppData\Local\Programs\Python\Launcher\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Local\Programs\Python\Python312;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Inkscape\bin;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\MinGW\bin;C:\Program Files\Ekahau\Ekahau AI Pro\oda-lib;C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python312\;C:\Users\User\AppData\Local\Programs\Python\Launcher\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Local\Programs\Python\Python312;, PROCESSOR_LEVEL=23, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, ESP_IDF_VERSION=5.3.1, PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules, SystemDrive=C:, OPENOCD_SCRIPTS=C:\Espressif\tools\openocd-esp32\v0.12.0-esp32-20240318\openocd-esp32\share\openocd\scripts, PT8HOME=C:\Program Files\Cisco Packet Tracer 8.2.2, USERNAME=User, ProgramFiles(x86)=C:\Program Files (x86), PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, DriverData=C:\Windows\System32\Drivers\DriverData, ProgramData=C:\ProgramData, IDF_COMPONENT_MANAGER=1, ProgramW6432=C:\Program Files, HOMEPATH=\Users\User, PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD, PYTHON_EXE_PATH=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe, ProgramFiles=C:\Program Files, PUBLIC=C:\Users\Public, windir=C:\Windows, =::=::\, LOCALAPPDATA=C:\Users\User\AppData\Local, GIT_PATH=C:/Espressif/tools/idf-git/2.44.0/cmd/git.exe, USERDOMAIN=DESKTOP-UHMIG1O, LOGONSERVER=\\DESKTOP-UHMIG1O, TERM=vt102, IDF_TOOLS_PATH=C:/Espressif, OneDrive=C:\Users\User\OneDrive, APPDATA=C:\Users\User\AppData\Roaming, VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\, CommonProgramFiles=C:\Program Files\Common Files, OS=Windows_NT, COMPUTERNAME=DESKTOP-UHMIG1O, IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1/, PROCESSOR_REVISION=1801, CommonProgramW6432=C:\Program Files\Common Files, ComSpec=C:\Windows\system32\cmd.exe, IDF_MAINTAINER=1, SystemRoot=C:\Windows, TEMP=C:\Users\User\AppData\Local\Temp, PYTHONUNBUFFERED=1, HOMEDRIVE=C:, USERPROFILE=C:\Users\User, TMP=C:\Users\User\AppData\Local\Temp, CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files, NUMBER_OF_PROCESSORS=8, com.ekahau.conf.dir=C:\Program Files\Ekahau\Ekahau AI Pro\conf, IDF_PYTHON_ENV_PATH=C:\Espressif\python_env\idf5.3_py3.11_env}
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:45.782
+!MESSAGE Connection Made to: 
+
+!ENTRY com.espressif.idf.core 1 0 2025-05-23 14:25:45.783
+!MESSAGE 0:0:0:0:0:0:0:1
