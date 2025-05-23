@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;34_4_HTTP-server_ESP-IDF&apos; to &apos;35_4_HTTP-server_ESP-IDF&apos;" description="Rename resource &apos;34_4_HTTP-server_ESP-IDF&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/34_4_HTTP-server_ESP-IDF" name="35_4_HTTP-server_ESP-IDF" stamp="1747986683163" updateReferences="true"/>
+</session>
