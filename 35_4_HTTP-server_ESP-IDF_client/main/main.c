@@ -13,6 +13,9 @@
 #define POST_INTERVAL_MS 2000
 
 static const char *TAG = "WiFi_Station_Client";
+char post_data[100] = {0};
+int16_t value = 14;
+
 
 void wifi_init_sta(void) {
     ESP_ERROR_CHECK(esp_netif_init());
@@ -46,7 +49,9 @@ void post_hello_task(void *pvParameters) {
 
         esp_http_client_handle_t client = esp_http_client_init(&config);
         //const char *post_data = "Hello";
-        const char *post_data = "10";
+        //const char *post_data = "10";
+        
+        snprintf(post_data, 100, "%d", value);
 
         esp_http_client_set_post_field(client, post_data, strlen(post_data));
         esp_http_client_set_header(client, "Content-Type", "application/x-www-form-urlencoded");
