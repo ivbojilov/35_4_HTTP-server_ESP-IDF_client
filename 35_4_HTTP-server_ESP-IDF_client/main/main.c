@@ -45,7 +45,8 @@ void post_hello_task(void *pvParameters) {
         };
 
         esp_http_client_handle_t client = esp_http_client_init(&config);
-        const char *post_data = "Hello";
+        //const char *post_data = "Hello";
+        const char *post_data = "10";
 
         esp_http_client_set_post_field(client, post_data, strlen(post_data));
         esp_http_client_set_header(client, "Content-Type", "application/x-www-form-urlencoded");
