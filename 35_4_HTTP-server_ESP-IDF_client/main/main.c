@@ -13,10 +13,12 @@
 #define POST_INTERVAL_MS 2000
 
 static const char *TAG = "WiFi_Station_Client";
-char post_data[100] = {0};
-int16_t value = 14;
-int8_t i = 0;
-int8_t numbers[2] = {127, 127};
+char post_data[1600] = {0};
+
+int16_t i = 0;
+int8_t numbers[400] = {0};
+
+int16_t j = 0;
 
 
 void wifi_init_sta(void) {
@@ -55,7 +57,7 @@ void post_hello_task(void *pvParameters) {
         
         post_data[0] = '\0';
         
-        for(i = 0; i<2; i++)
+        for(i = 0; i < 400; i++)
         {
 			char temp[8];
 			
@@ -63,7 +65,7 @@ void post_hello_task(void *pvParameters) {
 			
 			strcat(post_data, temp);
 			
-			if(i < 1) strcat(post_data, "|");
+			if(i < 399) strcat(post_data, "|");
 			
 		}
         
@@ -90,6 +92,11 @@ void app_main(void) {
 
     // Delay to allow connection
     vTaskDelay(pdMS_TO_TICKS(5000));
+    
+    for(j = 0; j<400; j++)
+    {
+		numbers[j] = 127;
+	}
 
     xTaskCreate(&post_hello_task, "post_hello_task", 8192, NULL, 5, NULL);
 }
