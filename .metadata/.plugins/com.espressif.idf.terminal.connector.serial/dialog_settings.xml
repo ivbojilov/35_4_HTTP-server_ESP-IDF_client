@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="SerialSettingsPage">
-		<item key="idf.monitor.project" value="35_4_HTTP-server_ESP-IDF"/>
+		<item key="idf.monitor.project" value="35_4_HTTP-server_ESP-IDF_client"/>
 		<item key="cdtserial.portName" value="COM5"/>
 		<item key="idf.monitor.filter" value=""/>
 	</section>

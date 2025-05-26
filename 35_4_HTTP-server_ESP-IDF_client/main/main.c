@@ -15,6 +15,8 @@
 static const char *TAG = "WiFi_Station_Client";
 char post_data[100] = {0};
 int16_t value = 14;
+int8_t i = 0;
+int8_t numbers[2] = {127, 127};
 
 
 void wifi_init_sta(void) {
@@ -51,7 +53,21 @@ void post_hello_task(void *pvParameters) {
         //const char *post_data = "Hello";
         //const char *post_data = "10";
         
-        snprintf(post_data, 100, "%d", value);
+        post_data[0] = '\0';
+        
+        for(i = 0; i<2; i++)
+        {
+			char temp[8];
+			
+			snprintf(temp, 8, "%d", numbers[i]);
+			
+			strcat(post_data, temp);
+			
+			if(i < 1) strcat(post_data, "|");
+			
+		}
+        
+        //snprintf(post_data, 100, "%d", value);
 
         esp_http_client_set_post_field(client, post_data, strlen(post_data));
         esp_http_client_set_header(client, "Content-Type", "application/x-www-form-urlencoded");
