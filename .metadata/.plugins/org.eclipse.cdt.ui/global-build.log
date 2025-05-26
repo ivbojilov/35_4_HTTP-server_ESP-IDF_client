@@ -1,0 +1,2 @@
+Building in: C:\ESP-IDE\35_4_HTTP-server_ESP-IDF_client\35_4_HTTP-server_ESP-IDF_client\build
+cmake --build . -- -v
