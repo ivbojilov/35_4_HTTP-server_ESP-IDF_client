@@ -11,8 +11,8 @@
 #define WIFI_PASS ""
 #define SERVER_IP "192.168.4.1"
 #define POST_INTERVAL_MS 10
-#define CHAR_ARR_LEN 4500
-#define INT_ARR_LEN 1000
+#define CHAR_ARR_LEN 9000
+#define INT_ARR_LEN 2000
 
 static const char *TAG = "WiFi_Station_Client";
 //char post_data[1800] = {0};
@@ -91,13 +91,13 @@ void post_hello_task(void *pvParameters) {
 
         esp_err_t err = esp_http_client_perform(client);
         if (err == ESP_OK) {
-            ESP_LOGI(TAG, "POST sent successfully");
+            //ESP_LOGI(TAG, "POST sent successfully");
         } else {
             ESP_LOGE(TAG, "POST failed: %s", esp_err_to_name(err));
         }
 
         //esp_http_client_cleanup(client);
-        vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
+        //vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
     }
 }
 
