@@ -10,7 +10,7 @@
 #define WIFI_SSID "ESP32_SERVER"
 #define WIFI_PASS ""
 #define SERVER_IP "192.168.4.1"
-#define POST_INTERVAL_MS 2000
+#define POST_INTERVAL_MS 100
 
 static const char *TAG = "WiFi_Station_Client";
 char post_data[1800] = {0};
@@ -45,13 +45,18 @@ void wifi_init_sta(void) {
 }
 
 void post_hello_task(void *pvParameters) {
-    while (1) {
-        esp_http_client_config_t config = {
-            .url = "http://" SERVER_IP "/post",
-            .method = HTTP_METHOD_POST,
-        };
+	
+    esp_http_client_config_t config = {
+        .url = "http://" SERVER_IP "/post",
+        .method = HTTP_METHOD_POST,
+        .transport_type = HTTP_TRANSPORT_OVER_TCP,
+        .keep_alive_enable = true,
+    };
 
-        esp_http_client_handle_t client = esp_http_client_init(&config);
+    esp_http_client_handle_t client = esp_http_client_init(&config);	
+	
+    while (1) {
+
         //const char *post_data = "Hello";
         //const char *post_data = "10";
         
@@ -72,7 +77,8 @@ void post_hello_task(void *pvParameters) {
         //snprintf(post_data, 100, "%d", value);
 
         esp_http_client_set_post_field(client, post_data, strlen(post_data));
-        esp_http_client_set_header(client, "Content-Type", "application/x-www-form-urlencoded");
+        esp_http_client_set_header(client, "Content-Type", "text/plain");
+        //esp_http_client_set_header(client, "Content-Type", "application/x-www-form-urlencoded");
 
         esp_err_t err = esp_http_client_perform(client);
         if (err == ESP_OK) {
@@ -81,8 +87,8 @@ void post_hello_task(void *pvParameters) {
             ESP_LOGE(TAG, "POST failed: %s", esp_err_to_name(err));
         }
 
-        esp_http_client_cleanup(client);
-        vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
+        //esp_http_client_cleanup(client);
+        //vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
     }
 }
 
