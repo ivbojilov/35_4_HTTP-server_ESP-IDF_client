@@ -106,7 +106,7 @@ void app_main(void) {
     wifi_init_sta();
 
     // Delay to allow connection
-    vTaskDelay(pdMS_TO_TICKS(5000));
+    vTaskDelay(pdMS_TO_TICKS(5000)); //
     
     client = esp_http_client_init(&config);	    
     
