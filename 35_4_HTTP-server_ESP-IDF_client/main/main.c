@@ -10,7 +10,7 @@
 #define WIFI_SSID "ESP32_SERVER"
 #define WIFI_PASS ""
 #define SERVER_IP "192.168.4.1"
-#define POST_INTERVAL_MS 10
+#define POST_INTERVAL_MS 200
 #define CHAR_ARR_LEN 9000
 #define INT_ARR_LEN 2000
 
@@ -69,19 +69,7 @@ void post_hello_task(void *pvParameters) {
         //const char *post_data = "Hello";
         //const char *post_data = "10";
         
-        post_data[0] = '\0';
-        
-        for(i = 0; i < INT_ARR_LEN; i++)
-        {
-			char temp[8];
-			
-			snprintf(temp, 8, "%d", numbers[i]);
-			
-			strcat(post_data, temp);
-			
-			if(i < INT_ARR_LEN-1) strcat(post_data, "|");
-			
-		}
+
         
         //snprintf(post_data, 100, "%d", value);
 
@@ -91,13 +79,13 @@ void post_hello_task(void *pvParameters) {
 
         esp_err_t err = esp_http_client_perform(client);
         if (err == ESP_OK) {
-            //ESP_LOGI(TAG, "POST sent successfully");
+            ESP_LOGI(TAG, "POST sent successfully");
         } else {
             ESP_LOGE(TAG, "POST failed: %s", esp_err_to_name(err));
         }
 
         //esp_http_client_cleanup(client);
-        //vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
+        vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
     }
 }
 
@@ -114,6 +102,20 @@ void app_main(void) {
     {
 		numbers[j] = (j / 20) % 2 == 0 ? 127 : -128;
 	}
+	
+    //post_data[0] = '\0';
+    
+    for(i = 0; i < INT_ARR_LEN; i++)
+    {
+		char temp[8];
+		
+		snprintf(temp, 8, "%d", numbers[i]);
+		
+		strcat(post_data, temp);
+		
+		if(i < INT_ARR_LEN-1) strcat(post_data, "|");
+		
+	}	
 
     xTaskCreate(&post_hello_task, "post_hello_task", 8192, NULL, 5, NULL);
 }
