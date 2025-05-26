@@ -10,16 +10,28 @@
 #define WIFI_SSID "ESP32_SERVER"
 #define WIFI_PASS ""
 #define SERVER_IP "192.168.4.1"
-#define POST_INTERVAL_MS 100
+#define POST_INTERVAL_MS 10
 
 static const char *TAG = "WiFi_Station_Client";
-char post_data[1800] = {0};
+//char post_data[1800] = {0};
+char post_data[3600] = {0};
 
 int16_t i = 0;
-int8_t numbers[400] = {0};
+//int8_t numbers[400] = {0};
+int8_t numbers[800] = {0};
 
 int16_t j = 0;
 
+
+esp_http_client_config_t config = {
+    .url = "http://" SERVER_IP "/post",
+    .method = HTTP_METHOD_POST,
+    .transport_type = HTTP_TRANSPORT_OVER_TCP,
+    .keep_alive_enable = true,
+};
+
+
+esp_http_client_handle_t client;
 
 void wifi_init_sta(void) {
     ESP_ERROR_CHECK(esp_netif_init());
@@ -46,14 +58,9 @@ void wifi_init_sta(void) {
 
 void post_hello_task(void *pvParameters) {
 	
-    esp_http_client_config_t config = {
-        .url = "http://" SERVER_IP "/post",
-        .method = HTTP_METHOD_POST,
-        .transport_type = HTTP_TRANSPORT_OVER_TCP,
-        .keep_alive_enable = true,
-    };
 
-    esp_http_client_handle_t client = esp_http_client_init(&config);	
+
+
 	
     while (1) {
 
@@ -62,7 +69,7 @@ void post_hello_task(void *pvParameters) {
         
         post_data[0] = '\0';
         
-        for(i = 0; i < 400; i++)
+        for(i = 0; i < 800; i++)
         {
 			char temp[8];
 			
@@ -70,7 +77,7 @@ void post_hello_task(void *pvParameters) {
 			
 			strcat(post_data, temp);
 			
-			if(i < 399) strcat(post_data, "|");
+			if(i < 799) strcat(post_data, "|");
 			
 		}
         
@@ -88,7 +95,7 @@ void post_hello_task(void *pvParameters) {
         }
 
         //esp_http_client_cleanup(client);
-        //vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
+        vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
     }
 }
 
@@ -99,7 +106,9 @@ void app_main(void) {
     // Delay to allow connection
     vTaskDelay(pdMS_TO_TICKS(5000));
     
-    for(j = 0; j < 400; j++)
+    client = esp_http_client_init(&config);	    
+    
+    for(j = 0; j < 800; j++)
     {
 		numbers[j] = (j / 20) % 2 == 0 ? 127 : -128;
 	}
