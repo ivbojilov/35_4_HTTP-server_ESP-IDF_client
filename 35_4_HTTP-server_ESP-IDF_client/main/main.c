@@ -11,14 +11,16 @@
 #define WIFI_PASS ""
 #define SERVER_IP "192.168.4.1"
 #define POST_INTERVAL_MS 10
+#define CHAR_ARR_LEN 4500
+#define INT_ARR_LEN 1000
 
 static const char *TAG = "WiFi_Station_Client";
 //char post_data[1800] = {0};
-char post_data[3600] = {0};
+char post_data[CHAR_ARR_LEN] = {0};
 
 int16_t i = 0;
 //int8_t numbers[400] = {0};
-int8_t numbers[800] = {0};
+int8_t numbers[INT_ARR_LEN] = {0};
 
 int16_t j = 0;
 
@@ -69,7 +71,7 @@ void post_hello_task(void *pvParameters) {
         
         post_data[0] = '\0';
         
-        for(i = 0; i < 800; i++)
+        for(i = 0; i < INT_ARR_LEN; i++)
         {
 			char temp[8];
 			
@@ -77,7 +79,7 @@ void post_hello_task(void *pvParameters) {
 			
 			strcat(post_data, temp);
 			
-			if(i < 799) strcat(post_data, "|");
+			if(i < INT_ARR_LEN-1) strcat(post_data, "|");
 			
 		}
         
@@ -108,7 +110,7 @@ void app_main(void) {
     
     client = esp_http_client_init(&config);	    
     
-    for(j = 0; j < 800; j++)
+    for(j = 0; j < INT_ARR_LEN; j++)
     {
 		numbers[j] = (j / 20) % 2 == 0 ? 127 : -128;
 	}
