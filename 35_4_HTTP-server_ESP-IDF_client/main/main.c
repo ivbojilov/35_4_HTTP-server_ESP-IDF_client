@@ -6,11 +6,13 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 #include "esp_http_client.h"
+#include "esp_timer.h"
+
 
 #define WIFI_SSID "ESP32_SERVER"
 #define WIFI_PASS ""
 #define SERVER_IP "192.168.4.1"
-#define POST_INTERVAL_MS 250
+#define POST_INTERVAL_MS 200
 #define CHAR_ARR_LEN 9000
 #define INT_ARR_LEN 2000
 
@@ -21,6 +23,9 @@ char post_data[CHAR_ARR_LEN] = {0};
 int16_t i = 0;
 //int8_t numbers[400] = {0};
 int8_t numbers[INT_ARR_LEN] = {0};
+
+unsigned long lastDouble = 0;
+unsigned long currentTime = 0;
 
 int16_t j = 0;
 
@@ -85,7 +90,21 @@ void post_hello_task(void *pvParameters) {
         }
 
         //esp_http_client_cleanup(client);
-        vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
+        //vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
+        
+        currentTime = esp_timer_get_time()/1000;
+		//vTaskDelay(pdMS_TO_TICKS( ( (currentTime - lastDouble) < 100000) ? POST_INTERVAL_MS : POST_INTERVAL_MS*3));
+		//lastDouble = currentTime;
+		
+		if (currentTime - lastDouble >= 100000)
+		{
+			vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS * 3));
+			lastDouble = currentTime;
+		} else {
+			vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
+		}
+		
+		        
     }
 }
 
