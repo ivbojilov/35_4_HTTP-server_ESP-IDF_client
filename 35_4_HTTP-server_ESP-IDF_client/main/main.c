@@ -10,7 +10,7 @@
 #define WIFI_SSID "ESP32_SERVER"
 #define WIFI_PASS ""
 #define SERVER_IP "192.168.4.1"
-#define POST_INTERVAL_MS 200
+#define POST_INTERVAL_MS 250
 #define CHAR_ARR_LEN 9000
 #define INT_ARR_LEN 2000
 
