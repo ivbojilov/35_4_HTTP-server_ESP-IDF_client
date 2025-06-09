@@ -93,12 +93,10 @@ void post_hello_task(void *pvParameters) {
         //vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
         
         currentTime = esp_timer_get_time()/1000;
-		//vTaskDelay(pdMS_TO_TICKS( ( (currentTime - lastDouble) < 100000) ? POST_INTERVAL_MS : POST_INTERVAL_MS*3));
-		//lastDouble = currentTime;
 		
 		if (currentTime - lastDouble >= 100000)
 		{
-			vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS * 3));
+			vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS * 3.9));
 			lastDouble = currentTime;
 		} else {
 			vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
