@@ -8,3 +8,4 @@ ec28725 - nummbers from -128 to +127; now printing the parsed numbers; serversid
 0929618 - send every 250 ms; serverside 91f5be3  
 f498670 - 1000 seconds achieved; serverside 91f5be3  
 915ff0a - reverted to 877e6e4  
+dd009c0 - the client sends encoded data; -128 -> ^bci; ^bci|bch; serverside 89e9861  
