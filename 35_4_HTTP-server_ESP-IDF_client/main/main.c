@@ -6,8 +6,6 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 #include "esp_http_client.h"
-#include "esp_timer.h"
-
 
 #define WIFI_SSID "ESP32_SERVER"
 #define WIFI_PASS ""
@@ -23,9 +21,6 @@ char post_data[CHAR_ARR_LEN] = {0};
 int16_t i = 0;
 //int8_t numbers[400] = {0};
 int8_t numbers[INT_ARR_LEN] = {0};
-
-unsigned long lastDouble = 0;
-unsigned long currentTime = 0;
 
 int16_t j = 0;
 
@@ -90,19 +85,7 @@ void post_hello_task(void *pvParameters) {
         }
 
         //esp_http_client_cleanup(client);
-        //vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
-        
-        currentTime = esp_timer_get_time()/1000;
-		
-		if (currentTime - lastDouble >= 100000)
-		{
-			vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS * 3.9));
-			lastDouble = currentTime;
-		} else {
-			vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
-		}
-		
-		        
+        vTaskDelay(pdMS_TO_TICKS(POST_INTERVAL_MS));
     }
 }
 
