@@ -90,6 +90,9 @@ void post_hello_task(void *pvParameters) {
 }
 
 void app_main(void) {
+	
+	int k = 0;
+	
     ESP_ERROR_CHECK(nvs_flash_init());
     wifi_init_sta();
 
@@ -111,6 +114,11 @@ void app_main(void) {
 		
 		snprintf(temp, 8, "%d", numbers[i]);
 		
+		for(k = 0; temp[k]; k++)
+		{
+			temp[k] = temp[k] + 49;
+		}
+		
 		strcat(post_data, temp);
 		
 		if(i < INT_ARR_LEN-1) strcat(post_data, "|");
@@ -118,4 +126,5 @@ void app_main(void) {
 	}	
 
     xTaskCreate(&post_hello_task, "post_hello_task", 8192, NULL, 5, NULL);
+    
 }
